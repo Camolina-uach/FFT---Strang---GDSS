@@ -1,0 +1,5 @@
+candidate,status,evidence
+FFT Strang GDSS Article v2,selected,"Newest final candidate; five source hashes match duplicate; eight manuscript CSVs match byte-for-byte"
+Article FFT Strang GDSS/FFT Strang GDSS Article v2,identical duplicate,"All five Python SHA-256 hashes match selected candidate"
+Old/FFT Strang GDSS Article,superseded,"gdss_experiments.py, gdss_plots.py, and run.py differ from selected source"
+Old/FFT Strang GDSS Corr,superseded,"gdss_experiments.py, gdss_plots.py, and run.py differ from selected source; ParaView exporter absent"

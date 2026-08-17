@@ -1,0 +1,7 @@
+diagnostic,symbol,maximum_value
+Long-wave interaction residual,$R_{\mathrm{lw}}$,6.504156955680404e-16
+Zero-mode residual,$Z_{\mathrm{lw}}$,0.0
+Hermitian symmetry defect,$H_f$,9.165725883006586e-13
+First long-wave equation residual,$\mathrm{res}_w$,1.5821496927710683e-16
+Second long-wave equation residual,$\mathrm{res}_v$,1.62289017722576e-16
+Spectral tail ratio,$T_u$,1.0984844504469681e-16

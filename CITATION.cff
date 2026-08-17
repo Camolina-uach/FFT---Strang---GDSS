@@ -1,0 +1,41 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the software and the associated article."
+title: "FFT-based Strang-splitting solver for the generalized Davey--Stewartson system"
+type: software
+version: 1.0.0
+date-released: 2026-08-17
+license: BSD-3-Clause
+repository-code: "https://github.com/Camolina-uach/FFT---Strang---GDSS"
+authors:
+  - family-names: "Molina-Holguín"
+    given-names: "Carlos Alberto"
+  - family-names: "Macías-Díaz"
+    given-names: "Jorge E."
+  - family-names: "Gallegos-Infante"
+    given-names: "L. A."
+  - family-names: "Jaimes-Reátegui"
+    given-names: "R."
+  - family-names: "Martínez-Herrera"
+    given-names: "M. A."
+keywords:
+  - generalized Davey--Stewartson system
+  - Strang splitting
+  - Fourier pseudospectral method
+  - FFT
+  - reproducible research
+preferred-citation:
+  type: article
+  title: "A reproducible FFT-based Strang-splitting baseline for the generalized Davey--Stewartson system"
+  authors:
+    - family-names: "Molina-Holguín"
+      given-names: "Carlos Alberto"
+    - family-names: "Macías-Díaz"
+      given-names: "Jorge E."
+    - family-names: "Gallegos-Infante"
+      given-names: "L. A."
+    - family-names: "Jaimes-Reátegui"
+      given-names: "R."
+    - family-names: "Martínez-Herrera"
+      given-names: "M. A."
+  journal: "International Journal of Modern Physics C"
+  notes: "Manuscript submitted/prepared for publication; add year, volume, pages, and DOI when available."

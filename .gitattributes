@@ -1,0 +1,10 @@
+* text=auto eol=lf
+
+*.py text eol=lf
+*.md text eol=lf
+# Reference CSV files retain their archived bytes (including CRLF endings).
+*.csv -text
+*.cff text eol=lf
+*.txt text eol=lf
+*.yml text eol=lf
+LICENSE text eol=lf

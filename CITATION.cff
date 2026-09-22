@@ -2,8 +2,9 @@ cff-version: 1.2.0
 message: "If you use this software, please cite the software and the associated article."
 title: "FFT-based Strang-splitting solver for the generalized Davey--Stewartson system"
 type: software
-version: 1.0.0
-date-released: 2026-08-17
+version: 1.1.0
+date-released: 2026-09-21
+doi: 10.5281/zenodo.21985607
 license: BSD-3-Clause
 repository-code: "https://github.com/Camolina-uach/FFT---Strang---GDSS"
 authors:

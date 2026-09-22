@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.1.0 — unreleased (manuscript revision)
+## 1.1.0 — 2026-09-21 (manuscript revision)
 
 - Added a manufactured-solution test of the coupled long-wave recovery, built
   from the adjugate of the long-wave operator, and a refined-reference

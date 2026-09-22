@@ -1,5 +1,19 @@
 # Changelog
 
+## 1.1.0 — unreleased (manuscript revision)
+
+- Added a manufactured-solution test of the coupled long-wave recovery, built
+  from the adjugate of the long-wave operator, and a refined-reference
+  convergence study of the recovered `w`, `v`, `Q` along the baseline run
+  (`gdss_manufactured.py`, `gdss_manufactured_plots.py`,
+  `tests/test_manufactured.py`).
+- Added a long-horizon drift run to `T = 20` on an enlarged domain for three
+  time steps (`gdss_long_horizon.py`, `gdss_long_horizon_plots.py`).
+- Added the spectral-resolution figure with the tail region `K_tail` marked
+  (`gdss_spectrum_figure.py`).
+- Added the `revision` command to `reproduce.py`.
+- The five archived scientific sources are unchanged (hash test still passes).
+
 ## 1.0.0 — 2026-08-17
 
 - Selected the final `FFT Strang GDSS Article v2` implementation after a hash

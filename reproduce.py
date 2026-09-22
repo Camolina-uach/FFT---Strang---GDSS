@@ -58,6 +58,33 @@ def run_paper(output_root: Path, with_paraview: bool) -> None:
         export_exp8_paraview(output_root=output_root, export_time_series=True)
 
 
+def run_revision(output_root: Path) -> None:
+    """Run the experiments added in the revision (v1.1.0) and their figures."""
+    import gdss_long_horizon
+    import gdss_long_horizon_plots
+    import gdss_manufactured
+    import gdss_manufactured_plots
+    import gdss_spectrum_figure
+
+    out = output_root / "revision"
+    out.mkdir(parents=True, exist_ok=True)
+    gdss_manufactured._write_environment(out)
+    gdss_manufactured.run_manufactured(out)
+    gdss_manufactured.run_reference(out)
+    for dt in (4.0e-3, 2.0e-3, 1.0e-3):
+        gdss_long_horizon.run(dt, T=20.0, every=0.1, out=out)
+    gdss_spectrum_figure.regenerate_spectra(out / "exp5_spatial")
+    gdss_spectrum_figure.plot(out / "exp5_spatial", out)
+    man = gdss_manufactured_plots._read(out / "manufactured_longwave.csv")
+    gdss_manufactured_plots.plot_fields(out)
+    gdss_manufactured_plots.plot_convergence(
+        out, man, gdss_manufactured_plots._read(out / "reference_longwave_convergence.csv"))
+    gdss_manufactured_plots.write_table(out, man)
+    runs = gdss_long_horizon_plots.load_runs(out)
+    gdss_long_horizon_plots.plot(out, runs)
+    gdss_long_horizon_plots.write_table(out, runs)
+
+
 def run_smoke(output_root: Path) -> None:
     """Exercise the orchestration quickly; values are not paper references."""
     params = GDSSParams(
@@ -113,6 +140,18 @@ def parse_args() -> argparse.Namespace:
         help="also create the large ParaView time-series export",
     )
 
+    revision = subparsers.add_parser(
+        "revision",
+        help="run the experiments added in the revision (manufactured solution, "
+             "long-horizon drift, spectrum figure with tail markers)",
+    )
+    revision.add_argument(
+        "--output-root",
+        type=Path,
+        default=HERE / "outputs",
+        help="output directory (default: repository/outputs)",
+    )
+
     smoke = subparsers.add_parser("smoke", help="run a small, fast workflow check")
     smoke.add_argument(
         "--output-root",
@@ -128,6 +167,8 @@ def main() -> None:
     output_root = args.output_root.resolve()
     if args.command == "paper":
         run_paper(output_root, args.with_paraview)
+    elif args.command == "revision":
+        run_revision(output_root)
     else:
         run_smoke(output_root)
     print(f"Completed successfully. Outputs: {output_root}")

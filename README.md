@@ -108,8 +108,17 @@ machine and are intentionally excluded from reference-value comparisons.
 
 ## Citation and licensing
 
-Use [`CITATION.cff`](CITATION.cff) to cite this software. Add the article DOI and
-the archived software DOI after acceptance/publication. The code is distributed
+Use [`CITATION.cff`](CITATION.cff) to cite this software. The software is
+archived on Zenodo:
+
+- all versions (always resolves to the latest):
+  [10.5281/zenodo.21985607](https://doi.org/10.5281/zenodo.21985607)
+- version 1.1.0 (manuscript revision):
+  [10.5281/zenodo.22891244](https://doi.org/10.5281/zenodo.22891244)
+- version 1.0.0 (original submission):
+  [10.5281/zenodo.21985608](https://doi.org/10.5281/zenodo.21985608)
+
+The article DOI will be added after publication. The code is distributed
 under the permissive [`BSD-3-Clause`](LICENSE) license, with authorization from
 the copyright holders.
 
